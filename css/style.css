@@ -1,7 +1,33 @@
 body {
-  background-color: darkgray;
+  background-color: rgb(60, 158, 197);
 }
 
 h1 {
-  font-size: large;
+  font-size: xx-large;
+  text-align: center;
+  background-color: rgb(0, 14, 14);
+  color: coral;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 5%;
+  font-size: x-large;
+}
+
+#p1 {
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#p2 {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+#p3 {
+  text-align: center;
+  padding-top: 1%;
 }
