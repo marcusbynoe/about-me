@@ -47,7 +47,7 @@ if (qFive === 'yes' || qFive === 'y') {
 
 alert(`Thanks for answering my questions ${userName}! Hope you learned a little more about me from the questionnaire!`);
 
-alert('But wait, theres more! You have to play a guessing game. Pick a number between 1 to 30. You will have 4 chances to guess it right!');
+alert('But wait, theres more! You have to play a guessing game. Pick a number between 10 to 30. You will have 4 chances to guess it right!');
 
 let myNum = '19';
 let numGuess = 4;
@@ -55,20 +55,23 @@ let numGuess = 4;
 // let userGuess = prompt('What number number am I thinking of?');
 for (let i = 0; i < numGuess; i++) {
   let userGuess = prompt('What number number am I thinking of?');
-  if (numGuess === 0&& userGuess !==myNum) {
-    console.log('Hello');
-    alert('out of tries');
-  }
-  else if (userGuess < myNum) {
-    alert('Too low!');
-    console.log(userGuess);
-  } else if (userGuess > myNum) {
-    alert('Too high!');
-    console.log(userGuess);
-  } else if (userGuess === myNum) {
+  if(userGuess === myNum){
     console.log(userGuess);
     alert('You got it right!');
     numGuess = 0;
     break;
+  }
+  // code assisted by TA Bradon Mizutani
+  else if(i >= 3){
+    console.log('out of tries');
+    alert('Out of guesses! The correct answer is: 19');
+    break;
+  }
+  if(userGuess < myNum){
+    alert('Too low!');
+    console.log(userGuess);
+  }else if(userGuess > myNum) {
+    alert('Too high!');
+    console.log(userGuess);
   }
 }
