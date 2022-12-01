@@ -49,12 +49,12 @@ alert(`Thanks for answering my questions ${userName}! Hope you learned a little 
 
 alert('But wait, theres more! You have to play a guessing game. Pick a number between 10 to 30. You will have 4 chances to guess it right!');
 
-let myNum = '19';
+let myNum = 19;
 let numGuess = 4;
 
 // let userGuess = prompt('What number number am I thinking of?');
 for (let i = 0; i < numGuess; i++) {
-  let userGuess = prompt('What number number am I thinking of?');
+  let userGuess = +prompt('What number number am I thinking of?');
   if(userGuess === myNum){
     console.log(userGuess);
     alert('You got it right!');
@@ -73,5 +73,19 @@ for (let i = 0; i < numGuess; i++) {
   }else if(userGuess > myNum) {
     alert('Too high!');
     console.log(userGuess);
+  }
+}
+
+let favFood = ['tacos', 'sushi', 'pasta', 'curry'];
+
+for(let i = 0; i < 6; i++){ // slow loop
+  let qSeven = prompt('What is my favorite foods?').toLowerCase();
+  for(let j = 0; j <favFood.length; j++){ // fast loop
+    if(qSeven === favFood[j]){
+      alert('You got it right!');
+      score++;
+      i = 6;
+      break;
+    }
   }
 }
