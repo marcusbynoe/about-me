@@ -79,7 +79,7 @@ for (let i = 0; i < numGuess; i++) {
 let favFood = ['tacos', 'sushi', 'pasta', 'curry'];
 
 for(let i = 0; i < 6; i++){ // slow loop
-  let qSeven = prompt('What is my favorite foods?').toLowerCase();
+  let qSeven = prompt('What is one of my favorite foods?').toLowerCase();
   for(let j = 0; j <favFood.length; j++){ // fast loop
     if(qSeven === favFood[j]){
       alert('You got it right!');
